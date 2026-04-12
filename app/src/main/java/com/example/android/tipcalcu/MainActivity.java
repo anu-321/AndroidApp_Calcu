@@ -15,6 +15,7 @@ import androidx.navigation.ui.NavigationUI;
 
 import com.example.android.tipcalcu.databinding.ActivityMainBinding;
 
+import android.content.Intent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
@@ -52,5 +53,9 @@ public class MainActivity extends AppCompatActivity {
          {
              double rv= CostValue*1.5; lblTotalcost.setText("The total cost is:"+ String.valueOf(rv));}
     }
-}
 
+    public void launchSnake(View view) {
+        Intent intent = new Intent(this, MainActivity2.class);
+        startActivity(intent);
+    }
+}
